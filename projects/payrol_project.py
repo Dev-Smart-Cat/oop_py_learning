@@ -1,0 +1,53 @@
+class Programmer:
+
+    salary = 100000
+    monthly_bonus = 500
+
+    def __init__(self, name, age, address, phone, programming_languages):
+        self.name = name
+        self.age = age
+        self.address = address
+        self.phone = phone
+        self.programming_languages = programming_languages
+
+class Assistant:
+
+    salary = 50000
+    monthly_bonus = 200
+
+    def __init__(self, name, age, address, phone, is_bilingual):
+        self.name = name
+        self.age = age
+        self.address = address
+        self. phone = phone
+        self.is_bilingual = is_bilingual
+
+# Function that prints the monthly salary of each worker
+# and the total amount that the startup owner has to pay per month.
+def calculate_payroll(employees):
+
+    total = 0
+
+    print("\n======= Welcome to our Payroll System ========\n")
+
+    # Iterate over the list of instances to calculate
+    # and display the monthly salary of each employee,
+    # and add the monthly salary to the total for this month.
+    for emplyee in employees:
+        salary = round(emplyee.salary / 12, 2) + emplyee.monthly_bonus
+        print(emplyee.name.capitalize() + "'s salary is: $", str(salary))
+        total += salary
+    
+    # Display the total
+    print("\n The total payroll this month will be: $", total)
+
+# Instances (employees)
+jack = Programmer("Jack", 45, "5th Avevue", "555-563-345", ["Python", "Java"])
+isabel = Programmer("Isabel", 25, "6th Avenue", "234-245-853", ["JaveScript"])
+nora = Assistant("Nore", 23, "7th Avenue", "562-577-333", True)
+
+# List of instances
+employees = [jack, isabel, nora]
+
+# Function call (Passing the list of instances as argument)
+calculate_payroll(employees)
