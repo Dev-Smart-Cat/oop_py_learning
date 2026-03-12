@@ -4,6 +4,8 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 ![OOP](https://img.shields.io/badge/OOP-Practice-orange)
 ![Status](https://img.shields.io/badge/status-learning-blueviolet)
+
+
 This repository is dedicated to documenting and storing my learning journey in Object-Oriented Programming (OOP). It contains a collection of scripts developed to practice and reinforce OOP concepts in Python. Below, there are detailed descriptions of the main principles and fundamentals of OOP, along with practical examples. This repository serves as a valuable resource for future review and as a hands-on reference to revisit and strengthen understanding of OOP through real-world scripts.
 
 ## Repo Summary
@@ -79,17 +81,18 @@ DIFFERENT NAME ASSIGNED TO THE SAME OBJECT.
 
 ### Mutation:
 
-Object -> mutable = can be modified such as:
-                    - lists, 
-                    - sets, 
-                    - dictionaries.
+Object:
+mutable = can be modified such as:
+- lists, 
+- sets, 
+- dictionaries.
        
-       -> imutable = cannot be modified such as:
-                    - booleans, 
-                    - integers, 
-                    - floats, 
-                    - string, 
-                    - tuples
+imutable = cannot be modified such as:
+- booleans, 
+- integers, 
+- floats, 
+- string, 
+- tuples
 
 #### Advantages and Disadvantages of Mutable and Immutable Data Types:
 
@@ -139,8 +142,8 @@ The methods defined in a class determine the behavior of the objects created fro
 and how they can interact with their state. 
 
 #### Type Methods:
-    - Instance Methods => methods that belong to a specific object. 
-    - They have access to the state of the object that calls them.
+- Instance Methods => methods that belong to a specific object. 
+- They have access to the state of the object that calls them.
 
 Calling a method IS THE SAME AS calling a function.
 Methods are define below the __init__ method.
@@ -238,23 +241,23 @@ We can make the attributes non-public and still provide a way to work with them 
 
 ## Import Statements
 
-    * import <module>
-        - This import statement import all the elements of the module.
-        - The elements (functions, classes and variables) can be accessed with this
-          syntax: <module>.<element>
+* import <module>
+- This import statement import all the elements of the module.
+- The elements (functions, classes and variables) can be accessed with this
+syntax: <module>.<element>
 
-    * from <module> import <elem>
-        - This import statement only imports the specified element from the module.
-        - We can use this element directly, without specifying the name of the module.
+* from <module> import <elem>
+- This import statement only imports the specified element from the module.
+- We can use this element directly, without specifying the name of the module.
 
-    * from <module> import *
-        - This is a wildcard import statement. It imports all the elements from the module.
-        - We do not need to specify the name of the module to use or call the elements.
+* from <module> import *
+- This is a wildcard import statement. It imports all the elements from the module.
+- We do not need to specify the name of the module to use or call the elements.
 
-    * import <module> as <name>
-        - This import statement is used to import a module with a different name, 
-          so we can use this new name in our code.
-        - The elements can be accessed with <name>.<element>.
+* import <module> as <name>
+- This import statement is used to import a module with a different name, 
+so we can use this new name in our code.
+- The elements can be accessed with <name>.<element>.
 
 ## Special Methods
 
