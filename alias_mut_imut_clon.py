@@ -1,14 +1,3 @@
-"""
-Alias => used to indicate an additional name that a person sometimes uses.
-
-Alias in programming => tow or more references to the same memory address in the program.
-
-Accessing a memory address with 2 references
-
-DIFFERENT NAME ASSIGNED TO THE SAME OBJECT
-
-"""
-
 a = [1, 2, 3, 4]
 
 b = a
@@ -87,20 +76,6 @@ print(her_backpack.items)
 print("\n")
 
 #--------------------------------------------------------------------------#
-"""
-Object -> mutable = can be modified such as:
-                    - lists, 
-                    - sets, 
-                    - dictionaries.
-       
-       -> imutable = cannot be modified such as:
-                    - booleans, 
-                    - integers, 
-                    - floats, 
-                    - string, 
-                    - tuples
-
-"""
 # Create a list
 a = [7, 3, 2, 1]
 
@@ -117,17 +92,6 @@ tup = (7 , 3, 2, 1)
 # Strings cannot be updated
 string = "Hello, world!"
 
-"""
-Advantages and Disadvantages of Mutable and Immutable Data Types:
-
-Memory efficiency => reuse existing objects instead of making new copies for each change.
-
-Represent real-world objects that are mutable by nature 
-
-Bugs: using mutable objects in a program might introduce bugs. You might unintentionally mutate an object in the program.
-
-"""
-
 def add_aboslute_values(seq):
     for i in range(len(seq)):
         # abs() function considers the number without + or -
@@ -143,11 +107,6 @@ add_aboslute_values(values)
 print("After calling the function: ", values)
 print("\n")
 
-""" 
-Potential risks of Aliasing:
-Mutating objects => we might mutate an object unintentionally through an alias.
-
-"""
 # Mutate an object through alias
 a = [1, 2, 3, 4]
 # Create an alias to the list of objects assigning the a to b variable
@@ -157,16 +116,7 @@ b[0] = 15
 print(b)
 print(a)
 
-"""
-Advantages of immutable objects
-Safer from bugs => since they cannot be modified, they are less likely to introduce bugs.
-Easier to understand => know their exact value, without any "hidden" or unexpected changes.
 
-Disadvantages of immutable objects
-Less efficient => it is needed to create a new copy of the object to make any changes,
-which can be costly.
-
-"""
 # Create a tuple
 a = (1, 2, 3, 4)
 print(id(a))
@@ -195,10 +145,6 @@ my_dict = {"a": 1, "b": 2, "c": 3, "d": 4}
 remove_even_values(my_dict)
 
 print(my_dict)
-
-"""
-CLoning => create an exact copy of the object that is completely independent from the original object.
-"""
 
 a = [1, 2, 3, 4]
 # Create a clone of the list without affecting the original list

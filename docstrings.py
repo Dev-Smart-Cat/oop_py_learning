@@ -1,20 +1,3 @@
-"""
-Key Guidelines:
-- Use Trople double quotes.
-- Closing quotes on same lines as opening quotes.
-- End the line with a period.
-- Write the aefect as a command.
-- No blank line before or after.
-- Mention return value.
-
-We can read the docstrings that are "linked" to an element with a help()
-function by passing the name of the class, function, method, or property name.
-
-This is possible because docstrings are "linked" to the elements that they are
-through the __doc__ attribute, a special attribute that we can use to access the docstring.
-
-"""
-
 # Documenting a function in python
 def make_frequency_dict(sequence):
     """Return a dictionary that maps each element in sequence to its frequency.

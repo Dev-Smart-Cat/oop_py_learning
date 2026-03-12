@@ -1,10 +1,3 @@
-"""
-A class attribute is an attribute of the class.
-
-All instances of the class have access to this attribute.
-They share the same value, so any changes made to this value affects all instances.
-"""
-
 class Dog:
 
     # This is a class attribute

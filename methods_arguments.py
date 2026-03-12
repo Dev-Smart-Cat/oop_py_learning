@@ -1,20 +1,3 @@
-"""
-Method => A function associated to an object of the class or to the class itself.
-
-The methods defined in a class determine the behavior of the objects created from the class
-and how they can interact with their state. 
-
-Type Methods:
-Instance Methods => methods that belong to a specific object. 
-They have access to the state of the object that calls them.
-
-Calling a method IS THE SAME AS calling a function.
-
-Methods are define below the __init__ method.
-
-Method names usually include verbs sice they represent actions.
-"""
-
 class Circle:
 
     def __int__(self, radious):
@@ -99,14 +82,6 @@ diameter = one_circle.find_diameter()
 print(diameter)
 
 #--------------------------------------------------------------------#
-"""
-Default Arguments:
-def method_name(self, parameter=value)
-
-The default value HAS TO BE at the end of the list of arguments.
-
-"""
-
 class Player:
 
     def __init__(self, x, y):

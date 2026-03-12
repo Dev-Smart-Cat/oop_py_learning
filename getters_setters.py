@@ -1,21 +1,3 @@
-"""
-Getters and setters are members of a class, that is, they are methods.
-
-Methods are like functions associated to a specific object or class.
-
-Getters and setters let us get and set the valur of an instance attribute.
-
-Getters => Get a value of an attribute.
-
-Setters => Set the value of an attribute.
-
-We can make the attributes non-public and still provide a way to work with them indirectly.
-
-GETTERS:
-get_name, get address, get_color, get_age, get_id 
-
-"""
-
 class Movie:
 
     def __init__(self, title, rating):
@@ -36,14 +18,6 @@ print("------------------")
 print("\n")
 
 #--------------------------------------------------------------------------------#
-"""
-Setters => methods that we can call to set the value an instance attribute = self.instance_attribute = instance_attribute.
-
-With setters we can validate the new value before assigning it to the attribute.
-
-set_ + <attribute> e.g: set_name, set_address, set_color, set_age, set_id
-"""
-
 class Dog:
 
     def __init__(self, name, age):

@@ -1,20 +1,3 @@
-"""
-Classes define the state and the behavior of the objects in a GENERIC way.
-It is not specific. The code in the class has to work for any instance of the class
-
-__init__() => special method used to define the initial state of an object.
-Called automatically when an instance is created.
-
-self => is a generic way of referring to the current instance of the class.
-self is a generic way of referring to the current instance of the class. 
-When using self, this referes to any concrete objects or instance of the class.
-
-Instance attributes:
-- They belong to the instances.
-- Every instance has its own, independent, copy of the attribute
-- Changing their value only affects a particular instance. Other instances are not modified
-"""
-
 class House:
 
     # price is an argument or parameter

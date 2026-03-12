@@ -1,19 +1,3 @@
-"""
-Special methos => their names start and end with double underscores.
-
-OPERATOR OVERLOADING => occurs when an operator has different implementations
-depending on the data type of the operands.
-This means that the same operator can have different functionality based on the data
-tupe of the operands.
-
-RICH COMPARISON => are special methods that allow us to customize the "behavior" 
-of the comparison operators (< <= > >= == !=) when there operators act on instances of the class.
-
-This customization of the behavior is a form of operator overloading because we are providing
-a different functionality for the same operator depending on the data type of the operands.  
-
-"""
-
 result = 5 + 6
 print(result)
 
@@ -259,16 +243,6 @@ print("\n")
 
 #---------------------------------------------------------------#
 print("Rich Comparison methods")
-"""
-Rich Comparison methods => compare objects based on specific criteria.
-__lt__ < less than
-__le__ <= less than or equal to
-__eq__ == equal to
-__ne__ != not equal to
-__gt__ > greater than
-__ge__ >= greater than or equal to
-
-"""
 
 print(15 <= 8)
 print(4 > 4)

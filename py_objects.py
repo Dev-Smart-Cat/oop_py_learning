@@ -1,25 +1,3 @@
-# Objects can be passed by => value 
-#                            => reference
-
-# In python, objects are passed by reference.
-
-"""
-How the objects are stored in a memory and the role of the id of an object:
-
-In python, everything is an object. When we create an object and assign it to a variable,
-the object is stored in a specific memory address and a reference to this memory address is returned.
-This is what variables "store", the reference to the object in memory. Each object has its own unique id (integer)
-during its lifetime that identifies the memory address where it is located.
-
-Explain the purpose of the is operator. How is it related to the id object:
-
-The "is" operator returns True if the two operands are or reference the object in memory.
-If this is the case, the id of the two operands is the same integer. If the ids are not equal, 
-the two operands are not the same object in memory and the "is" operator returns False. 
-The id is a unique integer that is assigned to an object during its lifetime to reference its memory address.
-The if of an objectcan be retrieved using id() function by passing THE OBJECT as argument.
-"""
-
 # THIS IS THE OBJECT
 my_list = [6, 2, 8, 2]
 
@@ -63,3 +41,196 @@ sale_one.print_sale
 jan_sales = [Sale(400), Sale(345), Sale(45)]
 
 print(find_total(jan_sales))
+
+
+print(object)
+
+# int are objects
+print(isinstance(5, object))
+
+# list is object
+print(isinstance([1, 2, 3], object))
+
+# string is object
+print(isinstance("hello, world!", object))
+
+# class is an object
+class Movie:
+
+    def __init__(self, title):
+        # This is an instance attribute
+        self.title = title
+
+print(isinstance(Movie, object))
+
+#---------------------------------------------------------#
+
+# Print the id of int object 15.
+print(id(15))
+
+# Print the id of string object
+print(id("Hello, world"))
+
+# Print the id list object with the same data
+a = [1, 2, 3, 4]
+b = [1, 2, 3, 4]
+print(id(a))
+print(id(b))
+
+class Backpack:
+
+    def __init__(self):
+        # This is an instance attribute
+        self._items = []
+    
+    @property
+    def items(self):
+        return self._items
+    
+my_backpack = Backpack()
+your_backpack = Backpack()
+
+# Print the id of class object backpack
+print("\n")
+print("Printing the class object ids")
+print(id(my_backpack))
+print(id(your_backpack))
+
+
+# How two objects can have the same value and still represent different objects in memory.
+# is vs == operators:
+print("\n")
+print("is vs == operators:")
+c = [1, 6, 2, 6]
+d = [1, 6, 2, 6]
+
+# Check the ids in the memory
+print(id(c))
+print(id(d))
+# output:
+# 127142292438848
+# 127142292438912
+
+
+print(c is d)
+print(c == d)
+# output:
+# False - false because they do not have the same id in memory, 
+# because is operator compares if they have the same memory id 
+
+# True - because both references and objects have the same values, the values are the same. 
+
+
+e = [5, 2, 1, 8, 3]
+f = [6, 2, 8, 9, 3]
+
+print("\n")
+print("Check if these list objects have the same id")
+print(e is f)
+
+# Copy e list to f variable
+g = [5, 2, 1, 8, 3]
+h = g
+
+print("\n")
+print("h is a copy of g list object:")
+print(h is g)
+
+# Comparing same object strings
+i = "hello, world!"
+j = "hello, world!"
+
+print("\n")
+print("Print the id string objects:")
+print(id(i))
+print(id(j))
+print("\n")
+
+print("Comparing same string objects:")
+print(i is j)
+print(j is i)
+print("\n")
+
+
+#------------------------------------------------------#
+
+
+a = 257
+b = 257
+print(a is b)
+print("\n")
+
+#---------------------------------------------------------#
+
+a = "Hi"
+print(id(a))
+
+b = "Hi"
+print(id(b))
+
+c = "Hi"
+print(id(c))
+
+d = "Hi"
+print(id(d))
+print("\n")
+
+# Since strings are immutable, ithe memory uses the same object.
+# Output:
+# 130680634357440
+# 130680634357440
+# 130680634357440
+# 130680634357440
+
+print(a is b is c is d)
+
+# Output:
+# True
+
+
+#--------------------------------------------------------------------#
+
+my_list = [6, 2, 8, 2]
+
+def print_data(seq):
+    print("Inside the function: ", id(seq))
+    for elem in seq:
+        print(elem)
+
+print("Outside the function:", id(my_list))
+print_data(my_list)
+print("\n")
+
+#-----------------------------------------------------------------------#
+one_list = [6, 2, 8, 2]
+
+def multiply_by_two(seq):
+    print(id(seq))
+    for i in range(len(seq)):
+        seq[i] *= 2
+
+multiply_by_two(one_list)
+print(id(one_list))
+print(one_list)
+print("\n")
+
+#-------------------------------------------------------------------------#
+
+class Sale:
+
+    def __init__(self, amount):
+        self.amount = amount
+
+def find_total(sales):
+
+    total = 0
+
+    for sale in sales:
+        total += sale.amount
+
+    return total
+
+january_sales = [Sale(400), Sale(345), Sale(45)]
+
+print("Total sale is:")
+print(find_total(january_sales))

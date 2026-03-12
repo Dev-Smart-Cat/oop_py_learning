@@ -1,13 +1,3 @@
-"""
-Abstraction => show only the essential attributes and hide unnecessary details from the user.
-Hide the complexity from the user. Abstraction also allows us to abstract out 
-common parts of the code to avoid repetition. 
-
-Interface => the "visible part of the class that the program can interact with."
-
-Implementation => the internal part of the class with the code that performs the functionality.
-"""
-
 # Public and non-public attributes
 class Student:
 
